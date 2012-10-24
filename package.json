@@ -1,5 +1,5 @@
 {
-  "name": "sword-client",
+  "name": "sword",
   "description": "SWORD (AtomPub) deposit client",
   "keywords": [
     "sword",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://github.com/timbrody/node-swordclient.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/timbrody/node-swordclient/issues"
   },
   "dependencies": {
 	"libxmljs": "*",
@@ -29,8 +29,15 @@
   },
   "licenses": [
     {
-      "type": "",
+      "type": "BSD",
       "url": ""
     }
-  ]
+  ],
+  "directories": [
+  	"lib",
+	"bin"
+  ],
+  "engines": {
+	  "node": "*"
+  }
 }

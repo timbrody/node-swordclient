@@ -3,7 +3,13 @@ sword-client
 
 Deposit items to SWORD (AtomPub) compatible repositories/collections.
 
-Usage:
+Installation
+------------
+
+	npm install sword
+
+Synopsis
+--------
 
 ```javascript
 var sword = require('sword')
@@ -12,15 +18,21 @@ var sword = require('sword')
 
 var options = url.parse ('http://myrepository.domain');
 
+// options are passed as-is to http.request()
 sword.connect(options, function(err, servicedocument) {
+	if (err && err.statusCode) {
+		// ... err is an http response
+	}
 	if (err) {
 		console.log (err);
 		process.exit();
 	}
 
 	console.log (servicedocument);
+	console.log (servicedocument.collection);
 });
 ```
+
 Copyright
 ---------
 
